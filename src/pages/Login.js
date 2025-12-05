@@ -4,10 +4,11 @@ import styled from "styled-components"; // 스타일드 컴포넌트로 CSS 스�
 
 const Container = styled.div`
   display: flex;
-  width: 768px;
+  width: 500px;
   margin: 0 auto;
   flex-direction: column;
   background-color: antiquewhite;
+  padding: 10px 30px;
 `;
 
 const Login = () => {
