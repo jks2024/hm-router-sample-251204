@@ -33,3 +33,29 @@ const Container = styled.div`
     margin-top: 3em;
   }
 `;
+
+const NewsItem = ({ article }) => {
+  const { title, description, url, urlToImage } = article;
+
+  return (
+    <Container>
+      {urlToImage && (
+        <div className="thumbnail">
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <img src={urlToImage} alt="이미지" />
+          </a>
+        </div>
+      )}
+      <div className="contents">
+        <h2>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        </h2>
+        <p>{description}</p>
+      </div>
+    </Container>
+  );
+};
+
+export default NewsItem;
