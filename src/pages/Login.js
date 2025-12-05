@@ -20,6 +20,9 @@ const Login = () => {
   const savedEmail = localStorage.getItem("email");
   const savedPw = localStorage.getItem("pw");
 
+  console.log(savedEmail);
+  console.log(savedPw);
+
   const onClickLogin = () => {
     if (inputEmail === savedEmail && inputPw === savedPw) {
       nav("home");
@@ -47,6 +50,8 @@ const Login = () => {
       <br />
       <br />
       <button onClick={onClickLogin}>로그인</button>
+      <br />
+      <Link to="/signup">회원가입</Link>
     </Container>
   );
 };
