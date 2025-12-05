@@ -17,8 +17,11 @@ const Login = () => {
 
   const nav = useNavigate(); // 페이지 이동을 위해 nav 객체 생성, 특정 시점에 페이지 이동
 
+  const savedEmail = localStorage.getItem("email");
+  const savedPw = localStorage.getItem("pw");
+
   const onClickLogin = () => {
-    if (inputEmail === "jks2024@gmail.com" && inputPw === "sphb8250") {
+    if (inputEmail === savedEmail && inputPw === savedPw) {
       nav("home");
     } else {
       alert("이메일과 패스워드가 일치 하지 않습니다.");
